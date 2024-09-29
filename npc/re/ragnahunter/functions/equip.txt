@@ -1,0 +1,9 @@
+function	script	On_Equip	{
+    changebase 1;
+	return;
+}
+
+function	script	On_UnEquip	{
+    changebase 0;
+	return;
+}

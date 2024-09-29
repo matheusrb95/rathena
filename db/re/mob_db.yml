@@ -81,6 +81,80 @@ Header:
   Version: 4
 
 Body:
+  - Id: 1090
+    AegisName: MASTERING
+    Name: Mastering
+    Level: 15
+    Hp: 1000
+    BaseExp: 200
+    JobExp: 200
+    Attack: 1
+    Attack2: 1
+    Defense: 10
+    MagicDefense: 15
+    Str: 1
+    Agi: 1
+    Vit: 1
+    Int: 1
+    Dex: 1
+    Luk: 1
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 240
+    AttackDelay: 1400
+    AttackMotion: 500
+    ClientAttackMotion: 288
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Mastering_Card
+        Rate: 1
+#- Id: 2409
+#    AegisName: DUMMY_50
+#    Name: Quick Dummy
+#    Level: 1
+#    Hp: 2500000
+#    AttackRange: 14
+#    Size: Medium
+#    Race: Formless
+#    Element: Neutral
+#    ElementLevel: 1
+#    WalkSpeed: 200
+#    Modes:
+#      NoRandomWalk: true
+#      TeleportBlock: true
+#      KnockBackImmune: true
+  - Id: 2409
+    AegisName: DUMMY_50
+    Name: Dummy 50
+    Level: 1
+    Hp: 99999999
+    Defense: 0
+    MagicDefense: 0
+    Str: 0
+    Agi: 0
+    Vit: 0
+    Int: 0
+    Dex: 0
+    Luk: 0
+    SkillRange: 0
+    ChaseRange: 0
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 200
+    ClientAttackMotion: 0
+    Ai: 06
+    Class: Boss
+    Modes:
+      TeleportBlock: true 
   - Id: 1001
     AegisName: SCORPION
     Name: Scorpion
@@ -4402,55 +4476,6 @@ Body:
       - Item: Kiss_Of_Angel
         Rate: 500
       - Item: Toad_Card
-        Rate: 1
-        StealProtected: true
-  - Id: 1090
-    AegisName: MASTERING
-    Name: Mastering
-    Level: 42
-    Hp: 1260
-    BaseExp: 157
-    JobExp: 177
-    Attack: 80
-    Attack2: 40
-    Defense: 48
-    MagicDefense: 31
-    Str: 35
-    Agi: 21
-    Vit: 41
-    Int: 12
-    Dex: 29
-    Luk: 60
-    AttackRange: 1
-    SkillRange: 10
-    ChaseRange: 12
-    Size: Medium
-    Race: Plant
-    Element: Water
-    ElementLevel: 1
-    WalkSpeed: 300
-    AttackDelay: 1072
-    AttackMotion: 672
-    ClientAttackMotion: 288
-    DamageMotion: 480
-    Ai: 21
-    Class: Boss
-    Drops:
-      - Item: Snowy_Horn
-        Rate: 100
-      - Item: Unripe_Apple
-        Rate: 25
-      - Item: Scarlet_Jewel
-        Rate: 500
-      - Item: Angel's_Safeguard
-        Rate: 500
-      - Item: Light_Granule
-        Rate: 250
-      - Item: Apple
-        Rate: 4000
-      - Item: Apple_Juice
-        Rate: 2000
-      - Item: Mastering_Card
         Rate: 1
         StealProtected: true
   - Id: 1091
@@ -57739,31 +57764,6 @@ Body:
     ElementLevel: 1
     WalkSpeed: 200
     ClientAttackMotion: 672
-    Ai: 06
-    Class: Boss
-    Modes:
-      TeleportBlock: true
-  - Id: 2409
-    AegisName: DUMMY_50
-    Name: Dummy 50
-    Level: 50
-    Hp: 99999999
-    Defense: 50
-    MagicDefense: 50
-    Str: 0
-    Agi: 0
-    Vit: 0
-    Int: 0
-    Dex: 0
-    Luk: 0
-    SkillRange: 0
-    ChaseRange: 0
-    Size: Medium
-    Race: Formless
-    Element: Neutral
-    ElementLevel: 1
-    WalkSpeed: 200
-    ClientAttackMotion: 0
     Ai: 06
     Class: Boss
     Modes:

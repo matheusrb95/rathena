@@ -1,0 +1,4 @@
+hugel,71,157,5	script	Blacksmith	4_M_DWARF,{
+    callshop "Equips_1", 1;
+    end;
+}

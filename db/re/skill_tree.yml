@@ -43,26 +43,20 @@ Header:
 Body:
   - Job: Novice
     Tree:
-      - Name: NV_BASIC
-        MaxLevel: 9
-      - Name: NV_FIRSTAID
-        MaxLevel: 1
-      - Name: NV_TRICKDEAD
-        MaxLevel: 1
-        Exclude: true
-      - Name: WE_CALLBABY
-        MaxLevel: 1
+      - Name: SM_SWORD
+        MaxLevel: 3
+      - Name: SM_TWOHAND
+        MaxLevel: 3
+      #- Name: AC_VULTURE
+      #  MaxLevel: 3
+      #- Name: KN_SPEARMASTERY
+      #  MaxLevel: 3
+      #- Name: PR_MACEMASTERY
+      #  MaxLevel: 3
   - Job: Swordman
     Inherit:
       Novice: true
     Tree:
-      - Name: SM_SWORD
-        MaxLevel: 10
-      - Name: SM_TWOHAND
-        MaxLevel: 10
-        Requires:
-          - Name: SM_SWORD
-            Level: 1
       - Name: SM_RECOVERY
         MaxLevel: 10
       - Name: SM_BASH
@@ -143,8 +137,6 @@ Body:
     Inherit:
       Novice: true
     Tree:
-      - Name: AC_OWL
-        MaxLevel: 10
       - Name: AC_VULTURE
         MaxLevel: 10
         Requires:
@@ -308,8 +300,6 @@ Body:
       Novice: true
       Swordman: true
     Tree:
-      - Name: KN_SPEARMASTERY
-        MaxLevel: 10
       - Name: KN_PIERCE
         MaxLevel: 10
         Requires:

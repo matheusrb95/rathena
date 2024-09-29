@@ -1,0 +1,97 @@
+pay_fild04,0,0,0	script	#instance_main_body	444,{
+	end;
+
+OnInstanceInit:
+	'instance_id = instance_id();
+	'map_pay_fild04$ = instance_mapname("pay_fild04");
+	'npc_instance_main_body$ = instance_npcname(strnpcinfo(0));
+
+	monster('map_pay_fild04$,67,150,"--en--",1002,3);
+	monster('map_pay_fild04$,67,160,"--en--",1090,1,'npc_instance_main_body$+"::OnBossKill");
+end;
+
+OnBossKill:
+	instance_announce('instance_id,"The Boss is killed!",0);
+	sleep2 2000;
+	instance_announce('instance_id,"You will return to base automatically in 15 seconds",0);
+	addtimer 15000,'npc_instance_main_body$+"::OnReturnBase";
+end;
+
+OnReturnBase:
+	instance_warpall "hugel",92,167;
+end;
+
+OnPCDieEvent:
+	instance_enter("Mastering");
+end;
+
+OnInstanceDestroy:
+	erasequest(1000);
+end;
+
+}
+
+hugel,102,160,4	script	Quest	4_M_TWBOY,{
+    .@instance_name$ = "Mastering";
+	
+	.@party_id = getcharid(1);
+	if (.@party_id < 1) {
+		mes "^ff0000To enter, you must create or join a party of 1 or more members.^000000";
+		close;
+	}
+
+    if (is_party_leader()) {
+		switch(select("Create:Enter:Deliver Quest:Destroy")) {
+			case 1:
+				instance_create(.@instance_name$, IM_PARTY);
+				break;
+			case 2:
+				switch(instance_enter(.@instance_name$)) {
+					case IE_NOMEMBER:
+						mes "ERROR: Party not found.";
+						break;
+					case IE_NOINSTANCE:
+						mes "ERROR: Party does not have an instance.";
+						break;
+					case IE_OTHER:
+						mes "ERROR: Unknown error.";
+						break;
+					default:
+						setquest(1000);
+						break;
+				}
+				break;
+			case 3:
+				erasequest(1000);
+				break;
+			case 4:
+				instance_destroy(instance_id(IM_PARTY));
+				break;
+		}
+	} else {
+		switch(select("Enter:Deliver Quest:Cancel")) {
+			case 1:
+				switch(instance_enter(.@instance_name$)) {
+					case IE_NOMEMBER:
+						mes "ERROR: Party not found.";
+						break;
+					case IE_NOINSTANCE:
+						mes "ERROR: Party does not have an instance.";
+						break;
+					case IE_OTHER:
+						mes "ERROR: Unknown error.";
+						break;
+					default:
+						setquest(1000);
+						break;
+				}
+				break;
+			case 2:
+				erasequest(1000);
+				break;
+			case 3:
+				break;
+		}
+	}   
+	end;
+}

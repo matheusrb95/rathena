@@ -150,7 +150,7 @@ Body:
   - Id: 2
     Name: SM_SWORD
     Description: Sword Mastery
-    MaxLevel: 10
+    MaxLevel: 3
     Type: Weapon
   - Id: 3
     Name: SM_TWOHAND

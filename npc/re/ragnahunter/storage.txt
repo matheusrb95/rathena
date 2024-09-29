@@ -1,0 +1,4 @@
+hugel,88,168,4	script	Storage	4_STEELBOX,{
+    openstorage;
+    end;
+}

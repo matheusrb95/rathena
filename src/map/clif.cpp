@@ -9855,8 +9855,10 @@ void clif_name( struct block_list* src, struct block_list *bl, send_target targe
 				clif_send( &packet, sizeof(packet), src, target );
 				return;
 			}
-
-			safestrncpy( packet.name, sd->status.name, NAME_LENGTH );
+			
+			char name[NAME_LENGTH];
+			sprintf( name, "[%d] %s", sd->status.base_level, sd->status.name);
+			safestrncpy( packet.name, name, NAME_LENGTH );
 
 			party_data *p = nullptr;
 
